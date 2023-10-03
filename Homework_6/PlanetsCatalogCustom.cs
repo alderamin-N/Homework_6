@@ -14,8 +14,10 @@ namespace Homework_6
         private List<Planet> _planets = new List<Planet>();
         int count = 0;
         public PlanetsCatalogCustom()
+            
         {
-            Planet planet1 = new Planet { Name = "Венера", Number = 2, Length = 38025, PreviousPlanet = null as Planet };
+           
+            Planet planet1 = new Planet { Name = "Венера", Number = 2, Length = 38025};
             Planet planet2 = new Planet { Name = "Земля", Number = 3, Length = 40075, PreviousPlanet = planet1 };
             Planet planet3 = new Planet { Name = "Марс", Number = 4, Length = 21344, PreviousPlanet = planet2 };
             _planets.Add(planet1);
@@ -24,7 +26,7 @@ namespace Homework_6
         }
 
 
-        public (int, int, string) GetPlanet(string name, Func<string, string> validator)
+        public (int, int, string) GetPlanet(string name, Func<string?, string> validator)
         {
             string result = validator(name);
             

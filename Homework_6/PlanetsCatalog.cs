@@ -14,7 +14,8 @@ namespace Homework_6
         int count = 0;
         public PlanetsCatalog()
         {
-            Planet planet1 = new Planet { Name = "Венера", Number = 2, Length = 38025, PreviousPlanet = null as Planet };
+           //public List<Planet> _planets = new List<Planet>();
+            Planet planet1 = new Planet { Name = "Венера", Number = 2, Length = 38025, PreviousPlanet = null};
             Planet planet2 = new Planet { Name = "Земля", Number = 3, Length = 40075, PreviousPlanet = planet1 };
             Planet planet3 = new Planet { Name = "Марс", Number = 4, Length = 21344, PreviousPlanet = planet2 };
             _planets.Add(planet1);
@@ -41,17 +42,5 @@ namespace Homework_6
             }
             return (0, 0, "Не удалось найти планету!");
         }
-
-        //PlanetValidator
-        // делегат PlanetValidator
-        //private delegate string PlanetValidator(string name =>
-        //    {
-
-        //    };
-
-
-
-
-
     }
 }
